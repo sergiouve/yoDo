@@ -4,7 +4,7 @@
 # # # # # # # # # # # # # # # # # # # # #
 #	TODO
 #	-? Import modules according to what is needed
-#	-! Add regex controll to wakeme
+#	-! Complete implementation of wakeme
 #
 # # # # # # # # # # # # # # # # # # # # #
 
