@@ -1,0 +1,14 @@
+{
+	"settings": {
+		"modules": {
+			"wakeme": true,
+			"sing": false
+		},
+
+		"user": {
+			"name": false,
+			"verbose": true,
+			"first_time": true
+		}
+	}
+}
