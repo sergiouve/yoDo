@@ -5,13 +5,17 @@
 #	TODO
 #	-? Import modules according to what is needed
 #	-! Complete implementation of wakeme
-#
+#	-! OOP
+#	-! Iterate through routes to sys.path.insert
+#	-! Dynamic routes for sys.path.insert
 # # # # # # # # # # # # # # # # # # # # #
 
 import os, sys, argparse, json
-from wakeme import *
-from setup_yodo import *
-from list_modules import *
+
+sys.path.insert(0, '/home/sergiouve/Desarrollo/yoDo/libs')
+sys.path.insert(0, '/home/sergiouve/Desarrollo/yoDo/modules')
+
+from yoDo import Yodo
 
 dev = True
 current_dir = os.getcwd()
@@ -29,37 +33,30 @@ if dev:
 	print
 	print '--------------'
 
-def load_settings():
-	global options
-
-	if os.path.isfile('settings'):
-		opts_file = open('settings', 'r')
-		opts_str = opts_file.read()
-		options = json.loads(opts_str)
-		# pprint.pprint(options)
-	else:
-		setup_yodo()
-
 def main():
-	load_settings()
-	parser = argparse.ArgumentParser(description='yoDo')
-	parser.add_argument('action', nargs = '?', default=None)
-	parser.add_argument('opt1', nargs = '?', default = None)
-	parser.add_argument('opt2', nargs = '?', default = None)
-	parser.add_argument('flags', nargs = '*', default = None)
+	yodo = Yodo()
+	yodo.say_hello()
 
-	args = parser.parse_args()
-	action = args.action
-	foption = args.opt1
-	soption = args.opt2
-	flags = args.flags
-
-	if action == 'wakeme':
-		wakeme()
-	elif action == 'list':
-		list_modules(options)
-	else:
-		print 'My name is yoDo'
+# def main():
+# 	load_settings()
+# 	parser = argparse.ArgumentParser(description='yoDo')
+# 	parser.add_argument('action', nargs = '?', default=None)
+# 	parser.add_argument('opt1', nargs = '?', default = None)
+# 	parser.add_argument('opt2', nargs = '?', default = None)
+# 	parser.add_argument('flags', nargs = '*', default = None)
+#
+# 	args = parser.parse_args()
+# 	action = args.action
+# 	foption = args.opt1
+# 	soption = args.opt2
+# 	flags = args.flags
+#
+# 	if action == 'wakeme':
+# 		wakeme()
+# 	elif action == 'list':
+# 		list_modules(options)
+# 	else:
+# 		print 'My name is yoDo'
 
 if __name__ == '__main__':
 	main()
