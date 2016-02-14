@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#YODO 0.0.1
+#YODO 0.1.0
 
 # # # # # # # # # # # # # # # # # # # # #
 #	TODO
@@ -12,14 +12,14 @@
 
 import os, sys, argparse, json
 
-sys.path.insert(0, '/home/sergiouve/Desarrollo/yoDo/libs')
-sys.path.insert(0, '/home/sergiouve/Desarrollo/yoDo/modules')
+sys.path.insert(0, '/home/sergiouve/Desarrollo/py_workspace/yoDo/libs')
+sys.path.insert(0, '/home/sergiouve/Desarrollo/py_workspace/yoDo/modules')
 
 from yoDo import Yodo
 
 dev = True
 current_dir = os.getcwd()
-ver = '0.0.1'
+ver = '0.1.0'
 
 if dev:
 	import pprint
@@ -35,28 +35,7 @@ if dev:
 
 def main():
 	yodo = Yodo()
-	yodo.say_hello()
-
-# def main():
-# 	load_settings()
-# 	parser = argparse.ArgumentParser(description='yoDo')
-# 	parser.add_argument('action', nargs = '?', default=None)
-# 	parser.add_argument('opt1', nargs = '?', default = None)
-# 	parser.add_argument('opt2', nargs = '?', default = None)
-# 	parser.add_argument('flags', nargs = '*', default = None)
-#
-# 	args = parser.parse_args()
-# 	action = args.action
-# 	foption = args.opt1
-# 	soption = args.opt2
-# 	flags = args.flags
-#
-# 	if action == 'wakeme':
-# 		wakeme()
-# 	elif action == 'list':
-# 		list_modules(options)
-# 	else:
-# 		print 'My name is yoDo'
+	yodo.do()
 
 if __name__ == '__main__':
 	main()

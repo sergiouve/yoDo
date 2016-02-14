@@ -45,3 +45,5 @@ def wakeme():
 			valid = True
 		else:
 			userbs = raw_input('Time? >> ')
+
+wakeme()
