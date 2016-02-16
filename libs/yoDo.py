@@ -2,9 +2,9 @@ import os, sys, argparse, json
 
 class Yodo(object):
 
-	def __init__(self, options = [], user_bs = []):
+	def __init__(self, options = [], userbs = []):
 		self.options = options
-		self.user_bs = user_bs
+		self.userbs = userbs
 
 	def say_hello(self):
 		print 'Hi, my name is yoDo'
@@ -44,11 +44,11 @@ class Yodo(object):
 	def do(self):
 
 		self.load_settings('settings')
-		self.user_bs = self.parse_input()
+		self.userbs = self.parse_input()
 
-		action = self.user_bs.action
-		foption = self.user_bs.opt1
-		soption = self.user_bs.opt2
-		flags = self.user_bs.flags
+		action = self.userbs.action
+		foption = self.userbs.opt1
+		soption = self.userbs.opt2
+		flags = self.userbs.flags
 
 		self.load_modules(action)
