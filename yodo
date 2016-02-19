@@ -12,8 +12,11 @@
 
 import os, sys, argparse, json
 
-sys.path.insert(0, '/home/sergiouve/Desarrollo/py_workspace/yoDo/libs')
-sys.path.insert(0, '/home/sergiouve/Desarrollo/py_workspace/yoDo/modules')
+with open('settings') as settings_file:
+	options = json.load(settings_file)
+
+sys.path.insert(0, options['paths']['libs'])
+sys.path.insert(0, options['paths']['modules'])
 
 from yoDo import Yodo
 
