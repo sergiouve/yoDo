@@ -9,9 +9,18 @@
 			"name": false,
 			"verbose": true,
 			"first_run": true
+		},
+
+		"getmydaygoin": {
+			"active": true,
+			"software": [
+				"atom",
+				"firefox",
+				"atom"
+			]
 		}
 	},
-	
+
 	"paths": {
 		"libs": "/home/sergiouve/Dev/py_workspace/yoDo/libs",
 		"modules": "/home/sergiouve/Dev/py_workspace/yoDo/modules"

@@ -3,11 +3,9 @@
 
 # # # # # # # # # # # # # # # # # # # # #
 #	TODO
-#	-? Import modules according to what is needed
-#	-! Complete implementation of wakeme
-#	-! OOP
-#	-! Iterate through routes to sys.path.insert
-#	-! Dynamic routes for sys.path.insert
+#
+#	- https://trello.com/b/7cWRawLR/yodo
+#
 # # # # # # # # # # # # # # # # # # # # #
 
 import os, sys, argparse, json

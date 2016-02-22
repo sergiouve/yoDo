@@ -1,3 +1,4 @@
+from sys import platform as _platform
 import subprocess
 import psutil
 
@@ -10,6 +11,9 @@ def getmydaygoin():
 			what_you_need.remove(proc.name())
 
 	for software in what_you_need:
-		background_run = subprocess.Popen(subprocess.call(['nohup', software, '&']))
-
-getmydaygoin()
+		if _platform == 'linux' or _platform == 'linux2' or _platform == 'darwin':
+			cmd = 'nohup ' + software + ' &'
+			subprocess.Popen(cmd, shell = True)
+			cmd = None
+		else:
+			print 'Not quite yet implemented...'

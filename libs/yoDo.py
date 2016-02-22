@@ -1,5 +1,5 @@
 import os, sys, argparse, json
-from modules import *
+import importlib as importlib
 
 class Yodo(object):
 
@@ -35,9 +35,11 @@ class Yodo(object):
 			if modules[module]:
 				print module
 
-	def load_modules(self, module = None, input = []):
+	def exec_mod(self, module = None, foption = None, soption = None, flags = None, input = []):
+		imported_mod = importlib.import_module(module)
 
-		whoareyou()
+		module_method = getattr(imported_mod, module)
+		module_exec = module_method()
 
 	def do(self):
 
@@ -49,4 +51,4 @@ class Yodo(object):
 		soption = self.userbs.opt2
 		flags = self.userbs.flags
 
-		self.load_modules(action, self.userbs)
+		self.exec_mod(action)
