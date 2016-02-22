@@ -1,7 +1,4 @@
 from subprocess import call
 
-def getproject(project):
+def getproject():
 	call(["ls", "-l"])
-	print project
-
-getproject(o.opt1)

@@ -1,4 +1,5 @@
 import os, sys, argparse, json
+from modules import *
 
 class Yodo(object):
 
@@ -34,12 +35,9 @@ class Yodo(object):
 			if modules[module]:
 				print module
 
-	def load_modules(self, module = None):
+	def load_modules(self, module = None, input = []):
 
-		if(module is None):
-			module = 'whoareyou'
-
-		__import__(module)
+		whoareyou()
 
 	def do(self):
 
@@ -51,4 +49,4 @@ class Yodo(object):
 		soption = self.userbs.opt2
 		flags = self.userbs.flags
 
-		self.load_modules(action)
+		self.load_modules(action, self.userbs)
