@@ -10,7 +10,9 @@
 
 import os, sys, argparse, json
 
-with open('settings') as settings_file:
+settings_path = os.getcwd() + '/.yodo/settings'
+
+with open(settings_path) as settings_file:
 	options = json.load(settings_file)
 
 sys.path.insert(0, options['paths']['libs'])
@@ -35,7 +37,7 @@ if dev:
 	print '--------------'
 
 def main():
-	yodo = Yodo()
+	yodo = Yodo(options)
 	yodo.do()
 
 if __name__ == '__main__':

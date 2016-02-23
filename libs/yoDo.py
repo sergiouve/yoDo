@@ -43,7 +43,7 @@ class Yodo(object):
 
 	def do(self):
 
-		self.load_settings('settings')
+		# self.load_settings('./settings')
 		self.userbs = self.parse_input()
 
 		action = self.userbs.action
