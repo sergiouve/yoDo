@@ -35,14 +35,16 @@ class Yodo(object):
 			if modules[module]:
 				print module
 
-	def exec_mod(self, module = None, foption = None, soption = None, flags = None, input = []):
-		imported_mod = importlib.import_module(module)
+	def exec_mod(self, module = "whoareyou", foption = None, soption = None, flags = None, input = []):
 
+		if module == None:
+			module = 'whoareyou'
+
+		imported_mod = importlib.import_module(module)
 		module_method = getattr(imported_mod, module)
 		module_exec = module_method()
 
 	def do(self):
-
 		# self.load_settings('./settings')
 		self.userbs = self.parse_input()
 

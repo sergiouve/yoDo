@@ -10,16 +10,6 @@
 
 import os, sys, argparse, json
 
-settings_path = os.getcwd() + '/.yodo/settings'
-
-with open(settings_path) as settings_file:
-	options = json.load(settings_file)
-
-sys.path.insert(0, options['paths']['libs'])
-sys.path.insert(0, options['paths']['modules'])
-
-from yoDo import Yodo
-
 dev = True
 current_dir = os.getcwd()
 ver = '0.1.0'
@@ -35,6 +25,18 @@ if dev:
 		sys.stdout.write(arg)
 	print
 	print '--------------'
+	settings_path = os.getcwd() + '/settings'
+	print settings_path
+else:
+	settings_path = os.getcwd() + '/.yodo/settings'
+
+with open(settings_path) as settings_file:
+	options = json.load(settings_file)
+
+sys.path.insert(0, options['paths']['libs'])
+sys.path.insert(0, options['paths']['modules'])
+
+from yoDo import Yodo
 
 def main():
 	yodo = Yodo(options)
