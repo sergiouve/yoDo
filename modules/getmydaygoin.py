@@ -2,9 +2,9 @@ from sys import platform as _platform
 import subprocess
 import psutil
 
-def getmydaygoin():
+def getmydaygoin(settings):
 
-	what_you_need = ['spotify', 'atom', 'firefox']
+	what_you_need = settings['settings']['getmydaygoin']['software']
 
 	for proc in psutil.process_iter():
 		if proc.name() in what_you_need:

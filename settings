@@ -22,7 +22,7 @@
 	},
 
 	"paths": {
-		"libs": "/home/sergiouve/Dev/py_workspace/yoDo/libs",
-		"modules": "/home/sergiouve/Dev/py_workspace/yoDo/modules"
+		"libs": "/home/sergiouve/Desarrollo/py_workspace/yoDo/libs",
+		"modules": "/home/sergiouve/Desarrollo/py_workspace/yoDo/modules"
 	}
 }
