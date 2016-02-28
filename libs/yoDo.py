@@ -7,9 +7,6 @@ class Yodo(object):
 		self.settings = settings
 		self.userbs = userbs
 
-	def say_hello(self):
-		print 'Hi, my name is yoDo'
-
 	def parse_input(self):
 		parser = argparse.ArgumentParser(description='yoDo')
 		parser.add_argument('action', nargs = '?', default=None)
