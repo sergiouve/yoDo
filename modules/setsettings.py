@@ -81,6 +81,7 @@ def show_menu():
 	print userbs
 
 	if userbs == 0:
+		clear()
 		print 'G\'bye!'
 		exit()
 
@@ -98,22 +99,47 @@ def show_menu():
 
 
 def show_opt1():
+	show_header()
 	print 'Opt 1'
+	userbs = raw_input( 'Continue? >> ')
+
+	while userbs is not 'y':
+		userbs = raw_input( 'Continue? >> ')
+
 	show_menu()
 
 def show_opt2():
+	show_header()
 	print 'Opt 2'
+	userbs = raw_input( 'Continue? >> ')
+
+	while userbs is not 'y':
+		userbs = raw_input( 'Continue? >> ')
+
 	show_menu()
 
 def show_opt3():
+	show_header()
 	print 'Opt 3'
+	userbs = raw_input( 'Continue? >> ')
+
+	while userbs is not 'y':
+		userbs = raw_input( 'Continue? >> ')
+
 	show_menu()
 
 def show_opt4():
+	show_header()
 	print 'Opt 4'
+	userbs = raw_input( 'Continue? >> ')
+
+	while userbs is not 'y':
+		userbs = raw_input( 'Continue? >> ')
+
 	show_menu()
 
 def show_header():
+	clear()
 	print '''
 # # # # # # # # # # # # # # # # #
 #    __  ______  ___  ____      #
