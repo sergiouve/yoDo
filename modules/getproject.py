@@ -1,4 +1,4 @@
 from subprocess import call
 
-def getproject():
+def getproject(settings):
 	call(["ls", "-l"])

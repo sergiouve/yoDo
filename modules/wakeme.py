@@ -32,7 +32,7 @@ class Alarm(threading.Thread):
 	def just_die(self):
 		self.keep_running = False
 
-def wakeme():
+def wakeme(settings):
 	valid = False
 	reg = re.compile('^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$')
 	current_time = datetime.datetime.now()

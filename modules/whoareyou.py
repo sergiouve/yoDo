@@ -1,2 +1,2 @@
-def whoareyou():
+def whoareyou(settings):
 	print 'Hi, my name is yodo'
