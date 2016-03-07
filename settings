@@ -12,6 +12,17 @@
 					"firefox",
 					"spotify"
 				]
+			},
+			"sendmail": {
+				"mail_client": "thunderbird",
+				"contacts": {
+					"Mon": "ramon@t4xi.com",
+					"Chava": "rchavalera@t4xi.com",
+					"test": "sergiouve@gmail.com"
+				},
+				"mail_bodies": {
+					"regular_call": "Muy buenas $name.<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!"
+				}
 			}
 		},
 
