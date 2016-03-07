@@ -1,5 +1,7 @@
 import os
 
+clear = lambda: os.system('clear')
+
 def sendmail(settings):
 	mail_client = settings['settings']['modules']['sendmail']['mail_client']
 	contacts = settings['settings']['modules']['sendmail']['contacts']
@@ -7,7 +9,7 @@ def sendmail(settings):
 
 	contact_names = contacts.keys()
 	contact_emails = contacts.values()
-
+	clear()
 	caller = raw_input('Who called? >> ')
 	company = raw_input('Which company? >> ')
 
@@ -33,7 +35,6 @@ def sendmail(settings):
 	body = body.replace('$name', name_to)
 	body = body.replace('$caller', caller)
 	body = body.replace('$company', company)
-	body = body.replace(',', '\,')
 
 	if mail_client == 'thunderbird':
 		cmd = mail_client +  " -compose to='" + mail_to + "',subject='" + caller + " - " + company +  "',body='" + body + "'"
