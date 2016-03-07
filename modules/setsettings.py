@@ -15,7 +15,7 @@ EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
 
 def setsettings(settings):
-	if not os.path.isfile('_settings'):
+	if not os.path.isfile('settings'):
 
 		first_run = False
 
@@ -31,7 +31,7 @@ def setsettings(settings):
 
 	else:
 		clear()
-		print text['welcome_not_new']
+		show_menu()
 
 
 def read_modules():
@@ -65,15 +65,13 @@ def show_menu():
 
 	print '''
  YODO CONF SCRIPT
- What would you like to do?
+ What would you like to tweak?
 
- 1. Packages
- 2. APIS
- 3. GUI
- 4. Do not enter
+ 1. yodo Core
 
- 0. Exit
 			'''
+
+
 	userbs = int(raw_input(' Choose an option >> '))
 	while userbs < 0 or userbs > 4:
 		userbs = int(raw_input(' Choose an option >> '))

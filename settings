@@ -1,28 +1,30 @@
 {
 	"settings": {
 		"modules": {
+			"whoareyou": true,
 			"wakeme": true,
-			"sing": false
+			"getproject": false,
+			"list_modules": false,
+			"getmydaygoin": {
+				"autostart": false,
+				"software": [
+					"atom",
+					"firefox",
+					"spotify"
+				]
+			}
 		},
 
 		"user": {
 			"name": false,
 			"verbose": true,
 			"first_run": true
-		},
-
-		"getmydaygoin": {
-			"active": true,
-			"software": [
-				"atom",
-				"firefox",
-				"spotify"
-			]
 		}
 	},
 
 	"paths": {
-		"libs": "/home/sergiouve/Desarrollo/py_workspace/yoDo/libs",
-		"modules": "/home/sergiouve/Desarrollo/py_workspace/yoDo/modules"
+		"libs": "/home/sergiouve/Dev/py_workspace/yoDo/libs",
+		"modules": "/home/sergiouve/Dev/py_workspace/yoDo/modules"
 	}
+
 }

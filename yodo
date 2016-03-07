@@ -25,11 +25,11 @@ if dev:
 		sys.stdout.write(arg)
 	print
 	print '--------------'
-	settings_path = os.getcwd() + '/settings'
+	settings = os.getcwd() + '/settings'
 else:
-	settings_path = os.getcwd() + '/.yodo/settings'
+	settings = os.getcwd() + '/.yodo/settings'
 
-with open(settings_path) as settings_file:
+with open(settings) as settings_file:
 	settings = json.load(settings_file)
 
 sys.path.insert(0, settings['paths']['libs'])
