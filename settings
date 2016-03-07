@@ -1,4 +1,5 @@
 {
+
 	"settings": {
 		"modules": {
 			"whoareyou": true,
@@ -21,7 +22,8 @@
 					"test": "sergiouve@gmail.com"
 				},
 				"mail_bodies": {
-					"regular_call": "Muy buenas $name.<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!"
+					"default": "Muy buenas $name,<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!",
+					"regular_call": "Muy buenas $name,<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!"
 				}
 			}
 		},

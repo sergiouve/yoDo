@@ -18,9 +18,8 @@ def sendmail(settings):
 		print str(n) + '. ' + name
 		n += 1
 
-	n /= 2
-
 	wanted_id = -1
+	n -= 1
 
 	while wanted_id < 0 or wanted_id > n:
 		wanted_id = input('>> ')
@@ -34,11 +33,10 @@ def sendmail(settings):
 	body = body.replace('$name', name_to)
 	body = body.replace('$caller', caller)
 	body = body.replace('$company', company)
+	body = body.replace(',', '\,')
 
 	if mail_client == 'thunderbird':
 		cmd = mail_client +  " -compose to='" + mail_to + "',subject='" + caller + " - " + company +  "',body='" + body + "'"
-		print cmd
-		# exit()
 		os.system(cmd)
 	else:
 		print 'Not quite implemented yet mate...'
