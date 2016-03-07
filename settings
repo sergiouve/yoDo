@@ -22,9 +22,13 @@
 					"test": "sergiouve@gmail.com"
 				},
 				"mail_bodies": {
-					"default": "Muy buenas $name,<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!",
-					"regular_call": "Muy buenas $name,<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!"
+					"default": "Muy buenas $name.<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!",
+					"regular_call": "Muy buenas $name.<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!"
 				}
+			},
+			"getweather": {
+				"default_city": "Barcelona",
+				"api_key": "472f156822eb5b562ebad7a0ce775944"
 			}
 		},
 

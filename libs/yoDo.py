@@ -33,6 +33,11 @@ class Yodo(object):
 
 		imported_mod = importlib.import_module(module)
 		module_method = getattr(imported_mod, module)
+
+		settings['foption'] = foption
+		settings['soption'] = soption
+		settings['flags'] = flags
+
 		module_exec = module_method(settings)
 
 	def do(self):
