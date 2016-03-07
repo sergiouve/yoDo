@@ -16,7 +16,7 @@ def sendmail(settings):
 	n = 1
 	for name in contact_names:
 		print str(n) + '. ' + name
-		n += n
+		n += 1
 
 	n /= 2
 
