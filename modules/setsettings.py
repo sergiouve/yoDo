@@ -11,16 +11,22 @@ text = {
 	'goodbye': 'Everything seems to be OK. Off you go!',
 	'welcome_not_new': 'Hi, there '
 }
+
 EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
-
 def setsettings(settings):
+
+	global user_settings
+	global modules_settings
+
+	user_settings = settings['settings']['user']
+	modules_settings = settings['settings']['modules']
+
 	if not os.path.isfile('settings'):
 
 		first_run = False
 
 		if first_run:
-
 			clear()
 			showmenu()
 
@@ -35,7 +41,8 @@ def setsettings(settings):
 
 
 def read_modules():
-	"""read_modules???"""
+	print settings
+	"""modules ="""
 
 
 def start_settings():
@@ -63,42 +70,52 @@ def show_menu():
 
 	show_header()
 
-	print '''
+	print 	'''
  YODO CONF SCRIPT
  What would you like to tweak?
 
  1. yodo Core
-
 			'''
 
+	n_option = 2
+	options = []
+	index = 0
+
+	for key, value in modules_settings.iteritems():
+		if not isinstance(value, bool):
+			print ' ' + str(n_option) + '. ' + key
+			options.insert(index, value)
+			n_option += 1
+			index += 1
+
+	print''
+	print ' 0. Exit'
+	print''
 
 	userbs = int(raw_input(' Choose an option >> '))
-	while userbs < 0 or userbs > 4:
-		userbs = int(raw_input(' Choose an option >> '))
+	n_option -= 1
 
-	print userbs
+	while userbs < 0 or userbs > n_option:
+		userbs = int(raw_input(' Choose an option >> '))
 
 	if userbs == 0:
 		clear()
 		print 'G\'bye!'
 		exit()
 
-	if userbs == 1:
-		show_opt1()
+	elif userbs == 1:
+		show_core_options()
 
-	if userbs == 2:
-		show_opt2()
-
-	if userbs == 3:
-		show_opt3()
-
-	if userbs == 4:
-		show_opt4()
+	else:
+		options_ar_index = userbs - 2
+		print options_ar_index
+		# print options
+		# show_module_options(options[options_ar_index])
 
 
-def show_opt1():
+def show_core_options():
 	show_header()
-	print 'Opt 1'
+	print 'yodo Core configuration'
 	userbs = raw_input( 'Continue? >> ')
 
 	while userbs is not 'y':
@@ -106,29 +123,10 @@ def show_opt1():
 
 	show_menu()
 
-def show_opt2():
+def show_module_options(module_id):
 	show_header()
-	print 'Opt 2'
-	userbs = raw_input( 'Continue? >> ')
-
-	while userbs is not 'y':
-		userbs = raw_input( 'Continue? >> ')
-
-	show_menu()
-
-def show_opt3():
-	show_header()
-	print 'Opt 3'
-	userbs = raw_input( 'Continue? >> ')
-
-	while userbs is not 'y':
-		userbs = raw_input( 'Continue? >> ')
-
-	show_menu()
-
-def show_opt4():
-	show_header()
-	print 'Opt 4'
+	print modules_settings[module_id]
+	# print 'yodo ' + modules_settings[module_id] + ' configuration'
 	userbs = raw_input( 'Continue? >> ')
 
 	while userbs is not 'y':

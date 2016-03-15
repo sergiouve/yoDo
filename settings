@@ -34,6 +34,7 @@
 
 		"user": {
 			"name": false,
+			"mail": false,
 			"verbose": true,
 			"first_run": true
 		}
