@@ -3,9 +3,9 @@ import importlib as importlib
 
 class Yodo(object):
 
-	def __init__(self, settings = [], userbs = []):
+	def __init__(self, settings = [], user_input = []):
 		self.settings = settings
-		self.userbs = userbs
+		self.user_input = user_input
 
 	def parse_input(self):
 		parser = argparse.ArgumentParser(description='yoDo')
@@ -41,11 +41,11 @@ class Yodo(object):
 		module_exec = module_method(settings)
 
 	def do(self):
-		self.userbs = self.parse_input()
+		self.user_input = self.parse_input()
 
-		action = self.userbs.action
-		foption = self.userbs.opt1
-		soption = self.userbs.opt2
-		flags = self.userbs.flags
+		action = self.user_input.action
+		foption = self.user_input.opt1
+		soption = self.user_input.opt2
+		flags = self.user_input.flags
 
 		self.exec_mod(action, self.settings, foption, soption, flags)

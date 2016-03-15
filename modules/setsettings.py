@@ -34,7 +34,6 @@ def setsettings(settings):
 			clear()
 			show_menu()
 
-
 	else:
 		clear()
 		show_menu()
@@ -88,55 +87,67 @@ def show_menu():
 			n_option += 1
 			index += 1
 
-	print''
+	print ''
 	print ' 0. Exit'
-	print''
+	print ''
 
-	userbs = int(raw_input(' Choose an option >> '))
+	user_input = int(raw_input(' Choose an option >> '))
 	n_option -= 1
 
-	while userbs < 0 or userbs > n_option:
-		userbs = int(raw_input(' Choose an option >> '))
+	while user_input < 0 or user_input > n_option:
+		user_input = int(raw_input(' Choose an option >> '))
 
-	if userbs == 0:
+	if user_input == 0:
 		clear()
 		print 'G\'bye!'
 		exit()
 
-	elif userbs == 1:
+	elif user_input == 1:
 		show_core_options()
 
 	else:
-		options_ar_index = userbs - 2
-		print options_ar_index
-		# print options
-		# show_module_options(options[options_ar_index])
-
+		options_ar_index = user_input - 2
+		show_module_options(options[options_ar_index])
 
 def show_core_options():
 	show_header()
 	print 'yodo Core configuration'
-	userbs = raw_input( 'Continue? >> ')
+	user_input = raw_input( 'Continue? >> ')
 
-	while userbs is not 'y':
-		userbs = raw_input( 'Continue? >> ')
+	while user_input is not 'y':
+		user_input = raw_input( 'Continue? >> ')
 
 	show_menu()
 
-def show_module_options(module_id):
+def show_module_options(module_setting_ar):
 	show_header()
-	print modules_settings[module_id]
-	# print 'yodo ' + modules_settings[module_id] + ' configuration'
-	userbs = raw_input( 'Continue? >> ')
 
-	while userbs is not 'y':
-		userbs = raw_input( 'Continue? >> ')
+	n_option = 1
+	for key, value in module_setting_ar.iteritems():
+		print ' ' + str(n_option) + '. (' + key + '): ' + value
+		n_option += 1
+
+	print ''
+	print ' 0. Exit'
+	print ''
+
+	user_input = int(raw_input( 'What do you wish to change? >> '))
+	n_option -= 1
+
+	while user_input < 0 or user_input > n_option:
+		user_input = int(raw_input('What do you wish to change? >> '))
+
+	print '===> I hope you know what you\'re doing, this could break the module! (or even the whole universe )<==='
+
+	new_value = raw_input('New value for : ')
+	print new_value
+	exit()
 
 	show_menu()
 
 def show_header():
 	clear()
-	print '''
+	print 	'''
 # # # # # # # # # # # # # # # # #
 #    __  ______  ___  ____      #
 #    \ \/ / __ \/ _ \/ __ \\     #

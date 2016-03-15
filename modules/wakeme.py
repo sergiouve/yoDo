@@ -36,12 +36,12 @@ def wakeme(settings):
 	valid = False
 	reg = re.compile('^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$')
 	current_time = datetime.datetime.now()
-	userbs = raw_input('Time? >> ')
+	user_input = raw_input('Time? >> ')
 
 	while valid is False:
-		if reg.match(userbs):
-			alarm = Alarm(userbs)
+		if reg.match(user_input):
+			alarm = Alarm(user_input)
 			alarm.start()
 			valid = True
 		else:
-			userbs = raw_input('Time? >> ')
+			user_input = raw_input('Time? >> ')
