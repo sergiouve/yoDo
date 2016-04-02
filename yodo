@@ -27,7 +27,7 @@ if dev:
 	print
 	print '--------------'
 
-settings = home_path + '.yodo/settings'
+settings = home_path + '/.yodo/settings'
 
 with open(settings) as settings_file:
 	settings = json.load(settings_file)
