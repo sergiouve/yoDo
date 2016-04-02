@@ -9,9 +9,10 @@
 # # # # # # # # # # # # # # # # # # # # #
 
 import os, sys, argparse, json
+from os.path import expanduser
 
 dev = True
-current_dir = os.getcwd()
+home_path = expanduser('~')
 ver = '0.1.0'
 
 if dev:
@@ -26,7 +27,7 @@ if dev:
 	print
 	print '--------------'
 
-settings = 'settings'
+settings = home_path + '.yodo/settings'
 
 with open(settings) as settings_file:
 	settings = json.load(settings_file)
