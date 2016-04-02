@@ -25,9 +25,8 @@ if dev:
 		sys.stdout.write(arg)
 	print
 	print '--------------'
-	settings = os.getcwd() + '/settings'
-else:
-	settings = os.getcwd() + '/.yodo/settings'
+
+settings = 'settings'
 
 with open(settings) as settings_file:
 	settings = json.load(settings_file)
