@@ -11,9 +11,16 @@
 import os, sys, argparse, json
 from os.path import expanduser
 
-dev = True
-home_path = expanduser('~')
+current_dir = os.path.dirname(__file__)
 ver = '0.1.0'
+settings = os.path.join(current_dir, 'settings')
+
+with open(settings) as settings_file:
+	settings = json.load(settings_file)
+
+sys.path.insert(0, settings['paths']['libs'])
+sys.path.insert(0, settings['paths']['modules'])
+dev = settings['development']
 
 if dev:
 	import pprint
@@ -27,13 +34,6 @@ if dev:
 	print
 	print '--------------'
 
-settings = home_path + '/.yodo/settings'
-
-with open(settings) as settings_file:
-	settings = json.load(settings_file)
-
-sys.path.insert(0, settings['paths']['libs'])
-sys.path.insert(0, settings['paths']['modules'])
 
 from yoDo import Yodo
 
