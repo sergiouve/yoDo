@@ -34,7 +34,6 @@ if dev:
 	print
 	print '--------------'
 
-
 from yoDo import Yodo
 
 def main():
