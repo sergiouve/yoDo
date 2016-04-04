@@ -1,11 +1,13 @@
 import sys
 import os
+import git
 
 def fishhke(settings):
-	if is_fishh_project():
+
+	if is_fishh_project(fishh_user):
 		print 'scafold!'
 	else:
-		print 'create!'
+		create_fishh_project()
 
 def is_fishh_project():
 	is_fishh = False
@@ -13,3 +15,7 @@ def is_fishh_project():
 	'''check for fishh project structure'''
 
 	return is_fishh
+
+def create_fishh_project():
+	fishh_repo = 'https://bitbucket.org/t4xi/fishh-clean'
+	git.Git().clone(fishh_repo)

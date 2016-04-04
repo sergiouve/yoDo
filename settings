@@ -29,6 +29,9 @@
 			"getweather": {
 				"default_city": "Barcelona",
 				"api_key": "472f156822eb5b562ebad7a0ce775944"
+			},
+			"fishhke": {
+				"user": "sergiouve@mail.com"
 			}
 		},
 
