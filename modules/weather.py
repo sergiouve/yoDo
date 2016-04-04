@@ -2,7 +2,7 @@ from pprint import pprint
 import requests
 import json
 
-def getweather(settings):
+def weather(settings):
 
 	api_key = settings['settings']['modules']['getweather']['api_key']
 

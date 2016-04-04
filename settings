@@ -31,7 +31,43 @@
 				"api_key": "472f156822eb5b562ebad7a0ce775944"
 			},
 			"fishhke": {
-				"user": "sergiouve@mail.com"
+				"directories": {
+					"ajax": false,
+					"css": {
+						"jquery-ui": true,
+						"styles.css": true
+					},
+					"html": {
+						"common": true,
+						"shivs": false
+					},
+					"images": true,
+					"js": true,
+					"js-source": {
+						"common": true,
+						"components": false
+					},
+					"lang": {
+						"es.php": true,
+						"en.php": false
+					},
+					"php": true,
+					"scss": true,
+					"vendors": true
+				},
+
+				"vendors": {
+					"bootstrap": true,
+					"jquery": true
+				},
+
+				"bower": {
+					"directory": "vendors",
+					"analytics": false,
+					"timeout": 120000
+				},
+
+				"templates": true
 			}
 		},
 

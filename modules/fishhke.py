@@ -1,13 +1,29 @@
 import sys
 import os
 import git
+import json
 
 def fishhke(settings):
 
-	if is_fishh_project():
-		print 'scaffold!'
+	if action == 'init':
+		print 'WUBBA LUBBA INIT'
+		options = setting['modules']['fishhke']
+
+		else:
+			main_menu()
+
+		use_templates = options['templates']
+		dirTree = options['directories']
+
+		for folder in dirTree:
+			if dirTree[folder] and not (os.path.isdir(folder)):
+				os.mkdir(folder)
+
+	elif action == 'create':
+		print 'WUBBA LUBBA GENERATE'
+
 	else:
-		create_fishh_project()
+		print 'WUBBA LUBBA ERROR!'
 
 def is_fishh_project():
 	is_fishh = False
