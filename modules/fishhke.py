@@ -13,7 +13,7 @@ def fishhke(settings):
 
 	if action == 'init':
 		print 'WUBBA LUBBA INIT'
-		options = settings['modules']['fishhke']
+		options = settings['settings']['modules']['fishhke']
 
 		use_templates = options['templates']
 		dirTree = options['directories']
