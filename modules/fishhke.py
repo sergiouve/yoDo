@@ -9,9 +9,6 @@ def fishhke(settings):
 		print 'WUBBA LUBBA INIT'
 		options = setting['modules']['fishhke']
 
-		else:
-			main_menu()
-
 		use_templates = options['templates']
 		dirTree = options['directories']
 
@@ -20,7 +17,7 @@ def fishhke(settings):
 				os.mkdir(folder)
 
 	elif action == 'create':
-		print 'WUBBA LUBBA GENERATE'
+		create_fishh_project()
 
 	else:
 		print 'WUBBA LUBBA ERROR!'
