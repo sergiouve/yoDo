@@ -5,7 +5,7 @@ import git
 def fishhke(settings):
 
 	if is_fishh_project():
-		print 'scafold!'
+		print 'scaffold!'
 	else:
 		create_fishh_project()
 
