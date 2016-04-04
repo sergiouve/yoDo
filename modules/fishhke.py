@@ -11,8 +11,10 @@ def fishhke(settings):
 
 def is_fishh_project():
 	is_fishh = False
+	current_path = os.getcwd()
 
-	'''check for fishh project structure'''
+	if os.path.isdir(current_path + '/fishh'):
+		is_fishh = True
 
 	return is_fishh
 
