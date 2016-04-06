@@ -5,10 +5,10 @@ import json
 
 def fishhke(settings):
 
-	flags = settings['flags']
-	
-	if not flags:
-		action = 'test':
+	action = settings['foption']
+
+	if not action:
+		action = 'test'
 
 	if action == 'init':
 		print 'WUBBA LUBBA INIT'
