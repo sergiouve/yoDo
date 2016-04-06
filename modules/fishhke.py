@@ -44,5 +44,5 @@ def is_fishh_project():
 
 def create_fishh_project(project_name = ''):
 	fishh_repo = 'https://bitbucket.org/t4xi/fishh-clean'
-	cmd = 'git clone  ' + fishh_repo + ' ' + project_name
-	subprocess.call(cmd)
+	cmd = 'mkdir ' + project_name + ' && git clone ' + fishh_repo + ' ' + project_name
+	subprocess.Popen(cmd, shell = True)
