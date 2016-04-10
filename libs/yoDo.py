@@ -23,7 +23,12 @@ class Yodo(object):
 		if module == None:
 			module = 'whoareyou'
 
-		imported_mod = importlib.import_module(module)
+		try:
+			imported_mod = importlib.import_module(module)
+		except ImportError:
+			print module + ' doesn\'t seems to be a yodo module...'
+			sys.exit(1)
+
 		module_method = getattr(imported_mod, module)
 
 		settings['foption'] = foption
