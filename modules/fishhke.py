@@ -23,15 +23,10 @@ def fishhke(settings):
 				os.mkdir(folder)
 
 	elif action == 'new':
-		if soption:
-			project_name = soption
-		else:
-			project_name = 'my-new-fishh.com'
-
+		
 		create_fishh_project(project_name)
-
 	else:
-		print 'WUBBA LUBBA ERROR!'
+		print 'What would you like to do? (init/new)'
 
 def is_fishh_project():
 	is_fishh = False
@@ -42,7 +37,7 @@ def is_fishh_project():
 
 	return is_fishh
 
-def create_fishh_project(project_name = ''):
+def create_fishh_project(project_name = 'my-new-fishh.com'):
 	fishh_repo = 'https://bitbucket.org/t4xi/fishh-clean'
 	cmd = 'mkdir ' + project_name + ' && git clone ' + fishh_repo + ' ' + project_name
 	subprocess.Popen(cmd, shell = True)
