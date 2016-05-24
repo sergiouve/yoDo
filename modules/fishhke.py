@@ -23,7 +23,7 @@ def fishhke(settings):
 				os.mkdir(folder)
 
 	elif action == 'new':
-		
+
 		create_fishh_project(project_name)
 	else:
 		print 'What would you like to do? (init/new)'
