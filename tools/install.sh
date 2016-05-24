@@ -45,6 +45,14 @@ if [ "$update" = true ]; then
 	rm ~/yodo_settings_bk
 fi
 
+echo 'Sleeping just for the laughs...'
+sleep 1
+echo 'ha...'
+sleep 1
+echo 'ha...'
+sleep 1
+echo 'ha.'
+
 yodo whoareyou
 
 if [ "$update" = true ]; then
