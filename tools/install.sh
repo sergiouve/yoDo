@@ -52,6 +52,7 @@ sleep 1
 echo 'ha...'
 sleep 1
 echo 'ha.'
+sleep 2
 
 yodo whoareyou
 
