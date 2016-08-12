@@ -1,5 +1,6 @@
 import os, sys, argparse, json
 import importlib as importlib
+import pprint
 
 class Yodo(object):
 
@@ -18,20 +19,17 @@ class Yodo(object):
 
 		return args
 
-	def list_modules(self, options):
-		modules = options['settings']['modules']
-		print 'Modules available: '
-
-		for module in modules:
-			if modules[module]:
-				print module
-
 	def exec_mod(self, module, settings, foption = None, soption = None, flags = None, input = []):
 
 		if module == None:
 			module = 'whoareyou'
 
-		imported_mod = importlib.import_module(module)
+		try:
+			imported_mod = importlib.import_module(module)
+		except ImportError:
+			print module + ' doesn\'t seems to be a yodo module...'
+			sys.exit(1)
+
 		module_method = getattr(imported_mod, module)
 
 		settings['foption'] = foption
