@@ -6,7 +6,7 @@
 			"wakeme": true,
 			"getproject": false,
 			"list_modules": false,
-			"getmydaygoin": {
+			"go": {
 				"autostart": false,
 				"software": [
 					"atom",

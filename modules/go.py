@@ -2,7 +2,7 @@ from sys import platform as _platform
 import subprocess
 import psutil
 
-def getmydaygoin(settings):
+def go(settings):
 
 	what_you_need = settings['settings']['modules']['getmydaygoin']['software']
 
