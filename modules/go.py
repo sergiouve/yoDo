@@ -4,7 +4,7 @@ import psutil
 
 def go(settings):
 
-	what_you_need = settings['settings']['modules']['getmydaygoin']['software']
+	what_you_need = settings['settings']['modules']['go']['software']
 
 	for proc in psutil.process_iter():
 		if proc.name() in what_you_need:
