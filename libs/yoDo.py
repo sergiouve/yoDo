@@ -20,14 +20,15 @@ class Yodo(object):
 		return args
 
 	def exec_mod(self, module, settings, foption = None, soption = None, flags = None, input = []):
-		
+
 		if module == None:
 			module = 'whoareyou'
 
 		try:
 			imported_mod = importlib.import_module(module)
-		except ImportError:
+		except ImportError as exc:
 			print module + ' doesn\'t seems to be a yodo module...'
+			sys.stderr.write("Error: failed to import settings module ({})".format(exc))
 			sys.exit(1)
 
 		module_method = getattr(imported_mod, module)
