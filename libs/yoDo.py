@@ -20,7 +20,7 @@ class Yodo(object):
 		return args
 
 	def exec_mod(self, module, settings, foption = None, soption = None, flags = None, input = []):
-
+		
 		if module == None:
 			module = 'whoareyou'
 
