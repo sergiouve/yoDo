@@ -4,10 +4,10 @@ import json
 
 def weather(settings):
 
-	api_key = settings['settings']['modules']['getweather']['api_key']
+	api_key = settings['settings']['modules']['weather']['api_key']
 
 	if settings['foption'] is None:
-		city = settings['settings']['modules']['getweather']['default_city']
+		city = settings['settings']['modules']['weather']['default_city']
 	else:
 		city = settings['foption']
 
