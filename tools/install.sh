@@ -5,7 +5,7 @@
 cd
 update=false
 
-python -c 'import sys; print(sys.version_info[:])' || {
+python -c 'import sys; print(".".join(map(str, sys.version_info[:3])))' || {
 	echo 'Python not detected'
 	echo 'Python is required for running yodo'
 	echo 'Do you want to install it now?'
