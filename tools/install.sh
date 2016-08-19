@@ -5,6 +5,12 @@
 cd
 update=false
 
+python -c 'import sys; print(sys.version_info[:])' || {
+	echo 'Python not detected'
+	echo 'Python is required for running yodo'
+	echo 'Do you want to install it now?'
+}
+
 case "$OSTYPE" in
 	darwin*)  echo 'export PATH="~/.yodo:$PATH"'  >> ~/.bash_profile; source ~/.bash_profile ;;
 	linux*)   echo 'export PATH="~/.yodo:$PATH"'  >> ~/.bashrc; source ~/.bashrc; echo 'linux' ;;
@@ -24,6 +30,8 @@ else
 	echo 'No previous installation found. Installing...'
 fi
 
+echo '-------------------------------'
+
 hash git >/dev/null 2>&1 || {
     echo "Error: git is not installed"
     exit 1
@@ -33,6 +41,7 @@ git clone --depth=1 https://github.com/sergiouve/yoDo.git || {
 	echo 'Error: git clone failed.'
 	exit 1
 }
+
 mkdir .yodo
 cp yoDo/. .yodo/ -R
 chmod a+x -R .yodo
