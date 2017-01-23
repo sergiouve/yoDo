@@ -1,89 +1,96 @@
 {
 
-	"settings": {
-		"modules": {
-			"whoareyou": true,
-			"wakeme": true,
-			"getproject": false,
-			"list_modules": false,
-			"go": {
-				"autostart": false,
-				"software": [
-					"atom",
-					"firefox",
-					"spotify"
-				]
-			},
-			"sendmail": {
-				"mail_client": "thunderbird",
-				"contacts": {
-					"Mon": "ramon@t4xi.com",
-					"Chava": "rchavalera@t4xi.com",
-					"test": "sergiouve@gmail.com"
-				},
-				"mail_bodies": {
-					"default": "Muy buenas $name.<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!",
-					"regular_call": "Muy buenas $name.<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!"
-				}
-			},
-			"weather": {
-				"default_city": "Barcelona",
-				"api_key": "472f156822eb5b562ebad7a0ce775944"
-			},
-			"fishhke": {
-				"directories": {
-					"ajax": false,
-					"css": {
-						"jquery-ui": true,
-						"styles.css": true
-					},
-					"html": {
-						"common": true,
-						"shivs": false
-					},
-					"images": true,
-					"js": true,
-					"js-source": {
-						"common": true,
-						"components": false
-					},
-					"lang": {
-						"es.php": true,
-						"en.php": false
-					},
-					"php": true,
-					"scss": true,
-					"vendors": true
-				},
+    "settings": {
+        "modules": {
+            "whoareyou": true,
+            "wakeme": true,
+            "getproject": false,
+            "list_modules": false,
+            "go": {
+                "autostart": false,
+                "software": [
+                    "atom",
+                    "firefox",
+                    "spotify"
+                ]
+            },
+            "sendmail": {
+                "mail_client": "thunderbird",
+                "contacts": {
+                    "Mon": "ramon@t4xi.com",
+                    "Chava": "rchavalera@t4xi.com",
+                    "test": "sergiouve@gmail.com"
+                },
+                "mail_bodies": {
+                    "default": "Muy buenas $name.<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!",
+                    "regular_call": "Muy buenas $name.<br/><br/> Te ha llamado $caller de $company. Me ha pedido que le devuelvas la llamada cuando puedas.<br/><br/>Un saludo!"
+                }
+            },
+            "weather": {
+                "default_city": "Barcelona",
+                "api_key": "472f156822eb5b562ebad7a0ce775944"
+            },
+            "fishhke": {
+                "directories": {
+                    "ajax": false,
+                    "css": {
+                        "jquery-ui": true,
+                        "styles.css": true
+                    },
+                    "html": {
+                        "common": true,
+                        "shivs": false
+                    },
+                    "images": true,
+                    "js": true,
+                    "js-source": {
+                        "common": true,
+                        "components": false
+                    },
+                    "lang": {
+                        "es.php": true,
+                        "en.php": false
+                    },
+                    "php": true,
+                    "scss": true,
+                    "vendors": true
+                },
 
-				"vendors": {
-					"bootstrap": true,
-					"jquery": true
-				},
+                "vendors": {
+                    "bootstrap": true,
+                    "jquery": true
+                },
 
-				"bower": {
-					"directory": "vendors",
-					"analytics": false,
-					"timeout": 120000
-				},
+                "bower": {
+                    "directory": "vendors",
+                    "analytics": false,
+                    "timeout": 120000
+                },
 
-				"templates": true
-			}
-		},
 
-		"user": {
-			"name": false,
-			"mail": false,
-			"verbose": true,
-			"first_run": true
-		}
-	},
+                "templates": true
+            },
 
-	"paths": {
-		"libs": "/home/sergiouve/Dev/py_workspace/yoDo/libs",
-		"modules": "/home/sergiouve/Dev/py_workspace/yoDo/modules"
-	},
+            "pocket": {
+                "developer_key": "62807-17557a34ab3facf7f200ed78",
+                "user_key": "e306e87b-4124-b190-49b9-fc3c54"
+            }
 
-	"development": true
+        },
+
+        "user": {
+            "name": false,
+            "mail": false,
+            "verbose": true,
+            "first_run": true
+        }
+    },
+
+    "paths": {
+        "libs": "/home/sergiouve/Dev/py_workspace/yodo/libs",
+        "modules": "/home/sergiouve/Dev/py_workspace/yodo/modules"
+    },
+
+    "development": true
 
 }
