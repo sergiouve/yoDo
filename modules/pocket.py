@@ -31,7 +31,7 @@ def pocket(settings):
 
     total_count = read_count + unread_count
 
-    print "Read articles: " + str(read_count)
     print "Unread articles: " + str(unread_count)
+    print "Read articles: " + str(read_count)
     print ""
     print "Total: " + str(total_count)
