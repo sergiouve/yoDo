@@ -17,8 +17,6 @@
             "sendmail": {
                 "mail_client": "thunderbird",
                 "contacts": {
-                    "Mon": "ramon@t4xi.com",
-                    "Chava": "rchavalera@t4xi.com",
                     "test": "sergiouve@gmail.com"
                 },
                 "mail_bodies": {
@@ -87,8 +85,8 @@
     },
 
     "paths": {
-        "libs": "/home/sergiouve/Dev/py_workspace/yodo/libs",
-        "modules": "/home/sergiouve/Dev/py_workspace/yodo/modules"
+        "libs": "/.yodo/libs",
+        "modules": "/.yodo/modules"
     },
 
     "development": true

@@ -17,12 +17,13 @@ from os.path import expanduser
 current_dir = os.path.dirname(__file__)
 ver = '0.1.0'
 settings = os.path.join(current_dir, 'settings')
+user_home = expanduser('~')
 
 with open(settings) as settings_file:
   settings = json.load(settings_file)
 
-sys.path.insert(0, settings['paths']['libs'])
-sys.path.insert(0, settings['paths']['modules'])
+sys.path.insert(0, user_home + settings['paths']['libs'])
+sys.path.insert(0, user_home + settings['paths']['modules'])
 dev = settings['development']
 
 if dev:
