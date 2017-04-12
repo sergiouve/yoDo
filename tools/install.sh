@@ -16,6 +16,10 @@ case "$OSTYPE" in
 	linux*)   echo 'export PATH="~/.yodo:$PATH"'  >> ~/.bashrc; source ~/.bashrc; echo 'linux' ;;
 esac
 
+if [ -n "$ZSH_VERSION" ]; then
+  echo 'export PATH=~/.yodo:$PATH' >> ~/.zshrc; source ~/.zshrc ;;
+fi
+
 echo 'Checking previous installation...'
 
 if [ -d .yodo ]; then
