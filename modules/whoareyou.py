@@ -1,10 +1,12 @@
 import os
 
-clear = lambda: os.system('clear')
+
+def clear(): return os.system('clear')
+
 
 def whoareyou(settings):
-	clear()
-	print 	'''
+  clear()
+  print '''
 # # # # # # # # # # # # # # # # #
 #    __  ______  ___  ____      #
 #    \ \/ / __ \/ _ \/ __ \\     #
@@ -15,4 +17,4 @@ def whoareyou(settings):
                                 ver 0.1.0
 
 Hi, my name is yodo.
-			'''
+        '''
