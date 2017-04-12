@@ -17,7 +17,7 @@ case "$OSTYPE" in
 esac
 
 if [ -n "$ZSH_VERSION" ]; then
-  echo 'export PATH=~/.yodo:$PATH' >> ~/.zshrc; source ~/.zshrc ;;
+  echo 'export PATH=~/.yodo:$PATH' >> ~/.zshrc; source ~/.zshrc;
 fi
 
 echo 'Checking previous installation...'
