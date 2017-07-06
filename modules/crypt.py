@@ -11,13 +11,13 @@ def crypt(settings):
     out_filename = settings['flags'][0]
     password = settings['flags'][1]
 
-    if (action == '-e'):
+    if (action == 'e'):
         with open(in_filename, 'rb') as in_file, open(out_filename, 'wb') as out_file:
             encrypt(in_file, out_file, password)
 
         return
 
-    elif (action == '-d'):
+    elif (action == 'd'):
         with open(in_filename, 'rb') as in_file, open (out_file_name, 'wb') as out_file:
             decrypt(in_file, out_file, password)
 
