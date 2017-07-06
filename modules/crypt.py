@@ -5,19 +5,28 @@ from Crypto import Random
 
 def crypt(settings):
 
-    print settings
-    return
-
     action = settings['foption']
     in_filename = settings['soption']
-    out_filename = settings['']
-    password = settings['']
+    # XXX - Smelly cat
+    out_filename = settings['flags'][0]
+    password = settings['flags'][1]
 
-    with open(in_filename, 'rb') as in_file, open(out_filename, 'wb') as out_file:
-        encrypt(in_file, out_file, password)
+    if (action == '-e'):
+        with open(in_filename, 'rb') as in_file, open(out_filename, 'wb') as out_file:
+            encrypt(in_file, out_file, password)
 
-    with open(in_filename, 'rb') as in_file, open (out_file_name, 'wb') as out_file:
-        decrypt(in_file, out_file, password)
+        return
+
+    elif (action == '-d'):
+        with open(in_filename, 'rb') as in_file, open (out_file_name, 'wb') as out_file:
+            decrypt(in_file, out_file, password)
+
+        return
+
+    else:
+        print 'Vat?'
+
+        return
 
 def deriveKeyAndIv(password, salt, key_length, iv_length):
     d = d_i = ''
