@@ -18,7 +18,7 @@ def crypt(settings):
         return
 
     elif (action == 'd'):
-        with open(in_filename, 'rb') as in_file, open (out_file_name, 'wb') as out_file:
+        with open(in_filename, 'rb') as in_file, open (out_filename, 'wb') as out_file:
             decrypt(in_file, out_file, password)
 
         return
