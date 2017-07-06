@@ -41,7 +41,7 @@ def encrypt(in_file, out_file, password, key_length=32):
     finished = False
 
     block_size = AES.block_size
-    salt = Random.new().read(bs - len('Salted__'))
+    salt = Random.new().read(block_size - len('Salted__'))
 
     key, iv = deriveKeyAndIv(password, salt, key_length, block_size)
     cipher = AES.new(key, AES.MODE_CBC, iv)
