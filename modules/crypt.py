@@ -1,4 +1,4 @@
-def crypt:
+def crypt():
     print 'Shhh...'
 
 def checkOpenSSL():
