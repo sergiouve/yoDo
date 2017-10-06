@@ -47,7 +47,7 @@ git clone --depth=1 https://github.com/sergiouve/yoDo.git || {
 }
 
 mkdir .yodo
-cp yoDo/. .yodo/ -R
+cp -R yodo/. .yodo/
 chmod a+x -R .yodo
 
 rm -rf ~/yoDo
