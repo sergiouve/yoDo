@@ -1,13 +1,6 @@
 #!/usr/bin/env python
 # YODO 0.1.0
 
-# # # # # # # # # # # # # # # # # # # # #
-#	TODO
-#
-#	- https://trello.com/b/7cWRawLR/yodo
-#
-# # # # # # # # # # # # # # # # # # # # #
-
 import os
 import sys
 import argparse
@@ -20,25 +13,25 @@ settings = os.path.join(current_dir, 'settings')
 user_home = expanduser('~')
 
 with open(settings) as settings_file:
-  settings = json.load(settings_file)
+    settings = json.load(settings_file)
 
 sys.path.insert(0, user_home + settings['paths']['libs'])
 sys.path.insert(0, user_home + settings['paths']['modules'])
 dev = settings['development']
 
 if dev:
-  import pprint
-  print '--------------'
-  print 'Dev stuff, nevermind...'
-  print 'yoDo ver: \t\t' + ver
-  print 'Sys: \t\t' + sys.platform
-  sys.stdout.write('Args: \t\t')
-  for arg in sys.argv:
-    sys.stdout.write(arg)
-  print
-  print '--------------'
+    import pprint
+    print '--------------'
+    print 'Dev stuff, nevermind...'
+    print 'yoDo ver: \t\t' + ver
+    print 'Sys: \t\t' + sys.platform
+    sys.stdout.write('Args: \t\t')
+    for arg in sys.argv:
+        sys.stdout.write(arg)
+    print
+    print '--------------'
 
-from yoDo import Yodo
+from yodo import Yodo
 
 
 def main():

@@ -1,11 +1,11 @@
 import os
 
 
-def listmods(settings):
+def list(settings):
 
-  modules_folder = settings['paths']['modules']
+    modules_folder = settings['paths']['modules']
 
-  for module in os.listdir(modules_folder):
-    if module.endswith('.py') and module != '__init__.py':
-      module = module.replace('.py', '')
-      print(module)
+    for module in os.listdir(modules_folder):
+        if module.endswith('.py') and module != '__init__.py':
+            module = module.replace('.py', '')
+            print(module)
