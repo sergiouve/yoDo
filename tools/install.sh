@@ -41,7 +41,7 @@ hash git >/dev/null 2>&1 || {
     exit 1
 }
 
-git clone --depth=1 https://github.com/sergiouve/yoDo.git || {
+git clone --depth=1 https://github.com/sergiouve/yodo.git || {
 	echo 'Error: git clone failed.'
 	exit 1
 }
